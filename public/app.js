@@ -19,10 +19,11 @@ new Vue({
             this.halaman = this.halaman-=1
         },
         getData(){
-            var self = this;
+            let self = this;
             axios('https://cors.lazydev.me/https://simpleblog.projects.lazydev.me/api/posts')
                 .then(response => self.posts_data = response.data)
-                .catch(err => console.log(err))
+                .catch(err => console.log(err));
+            let obj = JSON.parse(self.posts_data);
         }
     },
     computed:{

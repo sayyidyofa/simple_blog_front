@@ -2,14 +2,15 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Modul PWA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <link rel="shortcut icon" href="https://simpleblog.projects.lazydev.me/views/assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://simpleblog.projects.lazydev.me/views/assets/icons/favicon.ico"
+          type="image/x-icon"/>
     <link rel="icon" href="https://simpleblog.projects.lazydev.me/views/assets/icons/favicon-32x32.png"
-        sizes="32x32" />
+          sizes="32x32"/>
     <link rel="manifest" href="manifest.json">
     <script src="sw.js"></script>
 
@@ -18,54 +19,59 @@
 
 <body>
 
-    <!-- untuk program utama -->
-    <div class="ui container">
-        <div id="app">
-            <div class="ui equal width center aligned padded grid">
+<!-- untuk program utama -->
+<div class="ui container">
+    <div id="app">
+        <div class="ui equal width center aligned padded grid">
+            <div class="ui center aligned segment">
                 <div class="row">
-                            <img src="https://simpleblog.projects.lazydev.me/views/assets/icons/apple-touch-icon.png" alt=""
-                                 class="card-img-top" style="width:30%">
+                    <img src="https://simpleblog.projects.lazydev.me/views/assets/icons/apple-touch-icon.png" alt=""
+                         class="card-img-top" style="width:30%">
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 20px;">
                     <h3>Daftar Post Blog</h3>
-                    <p class="card-text">Berikut adalah semua posting blog dari TA SBD Sayyid</p>
-                    <p>Ada {{posts_data.length}} postingan</p>
-
+                    <p>Berikut adalah semua posting blog dari TA SBD Sayyid <br/>
+                        Ada {{posts_data.length}} postingan
+                    </p>
                 </div>
-                <div class="row">
-                    <a class="ui green button" v-show="awal>0" v-on:click="prev()">Previous</a>
-                    <a href="#" v-on:click="tampil = !tampil" class="ui blue button">Tampilkan</a>
-                    <a class="ui green button" v-show="akhir <= posts_data.length" v-on:click="next()">Next</a>
+            </div>
+            <div class="row">
+                <a class="ui green button" v-show="awal>0" v-on:click="prev()">Previous</a>
+                <a href="#" v-on:click="tampil = !tampil" class="ui blue button">Tampilkan</a>
+                <a class="ui green button" v-show="akhir <= posts_data.length" v-on:click="next()">Next</a>
+            </div>
+            <div class="row">
 
-                </div>
+            </div>
+            <div v-show="!tampil">
                 <div class="row">
-
-                </div>
-                <div class="row">
-                    <div v-show="!tampil">
-                        <div class="ui search centered">
-                            <!--<div class="ui icon input">
-                                <input class="prompt" type="text" v-model="search" placeholder="Search by title...">
-                                <i class="search icon"></i>
-                            </div>-->
-                        </div>
-                        <div class="ui cards" v-for="post in cari.slice(awal, akhir)">
-                            <div class="card">
-                                <div class="content">
-                                    <div class="header">{{post.title}}</div>
-                                    <div class="meta">{{post.timestamp}}</div>
-                                    <div class="description">{{post.tags}}</div>
+                    <div class="ui stackable one column grid">
+                        <div class="column">
+                            <div class="ui search centered">
+                                <!--<div class="ui icon input">
+                                    <input class="prompt" type="text" v-model="search" placeholder="Search by title...">
+                                    <i class="search icon"></i>
+                                </div>-->
+                            </div>
+                            <div class="ui cards" v-for="post in cari.slice(awal, akhir)">
+                                <div class="card">
+                                    <div class="content">
+                                        <div class="header">{{post.title}}</div>
+                                        <div class="meta">{{post.timestamp}}</div>
+                                        <div class="description">{{post.tags}}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <span>Hal {{halaman}}</span>
-                </div>
+            </div>
+            <div class="row">
+                <span>Hal {{halaman}}</span>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
