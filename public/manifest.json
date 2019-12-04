@@ -9,17 +9,32 @@
     "start_url": ".",
     "icons" : [
         {
-            "src": "/icon/32.ico",
+            "src": "/icon/32x.ico",
             "sizes": "32x32",
             "type": "image/ico"
         },
         {
-            "src": "/icon/192.ico",
+            "src": "/icon/96x.ico",
+            "sizes": "96x96",
+            "type": "image/ico"
+        },
+        {
+            "src": "/icon/128x.ico",
+            "sizes": "128x128",
+            "type": "image/ico"
+        },
+        {
+            "src": "/icon/192x.ico",
             "sizes": "192x192",
             "type": "image/ico"
         },
         {
-            "src": "/icon/512.ico",
+            "src": "/icon/256x.ico",
+            "sizes": "256x256",
+            "type": "image/ico"
+        },
+        {
+            "src": "/icon/512x.ico",
             "sizes": "512x512",
             "type": "image/ico"
         }
