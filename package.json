@@ -1,0 +1,17 @@
+{
+  "name": "ta-mdp-pwa",
+  "version": "1.0.0",
+  "description": "TA MDP PWA2",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 8080"
+  },
+  "keywords": [
+    "simple blog"
+  ],
+  "author": "Sayyid Y.",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "http-server": "0.9.0"
+  }
+}
