@@ -15,8 +15,8 @@ self.addEventListener('install', function (event) {
                     'https://cdn.jsdelivr.net/npm/vue/dist/vue.js',
                     'https://unpkg.com/axios/dist/axios.min.js',
                     'https://cors.lazydev.me/https://simpleblog.projects.lazydev.me/api/posts',
-                    'https://simpleblog.projects.lazydev.me/views/assets/icons/apple-touch-icon.png',
-                    'https://simpleblog.projects.lazydev.me/views/assets/icons/favicon.ico'
+                    'https://cors.lazydev.me/https://simpleblog.projects.lazydev.me/views/assets/icons/apple-touch-icon.png',
+                    'https://cors.lazydev.me/https://simpleblog.projects.lazydev.me/views/assets/icons/favicon.ico'
                 ]);
             })
     );
